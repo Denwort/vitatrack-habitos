@@ -1,0 +1,23 @@
+{
+    "family": "vitatrack_habitos_task",
+    "networkMode": "awsvpc",
+    "requiresCompatibilities": ["FARGATE"],
+    "executionRoleArn": "arn:aws:iam::160885283788:role/ECSExecutionRole",
+    "cpu": "256",
+    "memory": "512",
+    "containerDefinitions": [
+      {
+        "name": "vitatrack_habitos",
+        "image": "160885283788.dkr.ecr.us-east-2.amazonaws.com/vitatrack_habitos:latest",
+        "portMappings": [
+          {
+            "containerPort": 80,
+            "hostPort": 80,
+            "protocol": "tcp"
+          }
+        ],
+        "essential": true
+      }
+    ]
+  }
+  
